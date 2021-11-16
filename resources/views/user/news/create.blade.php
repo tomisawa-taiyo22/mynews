@@ -28,7 +28,9 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="body">本文</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="body" rows="20">■やったこと
+■これからやること
+■困っていること{{ old('body') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -38,7 +40,7 @@
                         </div>
                     </div>
                     {{ csrf_field() }}
-                    <input type="submit" class="btn btn-primary" value="更新">
+                    <input type="submit" class="btn btn-primary" value="投稿">
                 </form>
             </div>
         </div>
