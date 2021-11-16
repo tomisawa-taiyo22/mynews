@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -13,7 +13,7 @@ class NewsController extends Controller
 {
     //
     public function add(){
-        return view('admin.news.create');
+        return view('user.news.create');
     }
 
     public function create(Request $request){
@@ -40,7 +40,7 @@ class NewsController extends Controller
         $news->fill($form);
         $news->save();
 
-        return redirect('admin/news/create');
+        return redirect('user/news/create');
     }
 
     public function index(Request $request){
@@ -52,7 +52,7 @@ class NewsController extends Controller
             //それ以外はすべてのニュースを取得する
             $posts = News::all();
         }
-        return view('admin.news.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        return view('user.news.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
     public function edit(Request $request){
@@ -61,7 +61,7 @@ class NewsController extends Controller
         if (empty($news)){
             abort(404);
         }
-        return view('admin.news.edit', ['news_form' => $news]);
+        return view('user.news.edit', ['news_form' => $news]);
 
     }
 
@@ -92,12 +92,12 @@ class NewsController extends Controller
         $history->edited_at = Carbon::now();
         $history->save();
 
-        return redirect('admin/news/');
+        return redirect('user/news/');
     }
 
     public function delete(Request $request){
         $news = News::find($request->id);
         $news->delete();
-        return redirect('admin/news/');
+        return redirect('user/news/');
     }
 }
