@@ -15,14 +15,16 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-
-            <!-- Authentication Links -->
-            {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
-            @guest
+                <!-- Authentication Links -->
+                {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
+                @guest
                 <li><a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a></li>
                 <li><a class="nav-link" href="{{ route('register') }}">{{ __('ユーザー登録') }}</a></li>
-            {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
-            @else
+                {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
+                @else
+                <a class="navbar-brand"　 href="{{ url('/user/news/create') }}" role="button" class="btn btn-primary">
+                    {{ _('投稿する') }}
+                </a>
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <span class="caret"></span>
@@ -32,9 +34,8 @@
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            {{ __('ログアウト') }}
                         </a>
-
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
