@@ -10,8 +10,8 @@ class News extends Model
     protected $guarded = array('id');
 
     public static $rules = array(
-        'title' => 'required',
-        'body' => 'required',
+        'title' => 'required|max:30',
+        'body' => 'required|min:5|max:200',
     );
 
     // News Modelに関連付けを行う
