@@ -26,6 +26,19 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth'], function(){
     Route::get('profile/edit','User\ProfileController@edit');
 });
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('tasks', 'TaskController@index')->name('tasks.index');
+    Route::post('tasks', 'TaskController@store')->name('tasks.store');
+    Route::put('tasks/sync', 'TaskController@sync')->name('tasks.sync');
+    Route::delete('tasks/{tasks}', 'TaskController@destroy')->name('tasks.destroy');
+});
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::post('statuses', 'StatusController@store')->name('statuses.store');
+    Route::put('statuses/sync', 'StatusController@sync')->name('statuses.sync');
+    Route::delete('statuses/{status}', 'StatusController@destroy')->name('statuses.destroy');
+});
+
 Route::get('/', 'NewsController@index');
 
 Auth::routes();
@@ -33,17 +46,3 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

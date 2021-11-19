@@ -1721,6 +1721,80 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/KanbanBoard.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/KanbanBoard.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    initialData: Array
+  },
+  data: function data() {
+    return {
+      statuses: []
+    };
+  },
+  mounted: function mounted() {
+    this.statuses = JSON.parse(JSON.stringify(this.initialData));
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -37436,6 +37510,140 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/KanbanBoard.vue?vue&type=template&id=12d93558&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/KanbanBoard.vue?vue&type=template&id=12d93558& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "relative p-2 flex overflow-x-auto h-full" },
+    _vm._l(_vm.statuses, function(status) {
+      return _c(
+        "div",
+        {
+          key: status.slug,
+          staticClass: "mr-6 w-4/5 max-w-xs flex-1 flex-shrink-0"
+        },
+        [
+          _c("div", { staticClass: "rounded-md shadow-md overflow-hidden" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "p-3 flex justify-between items-baseline bg-blue-800 "
+              },
+              [
+                _c("h4", { staticClass: "font-medium text-white" }, [
+                  _vm._v("\n          " + _vm._s(status.title) + "\n        ")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "py-1 px-2 text-sm text-orange-500 hover:underline"
+                  },
+                  [_vm._v("\n          タスク追加\n        ")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "p-2 flex-1 flex flex-col h-full overflow-x-hidden overflow-y-auto bg-blue-100"
+              },
+              [
+                _vm._l(status.tasks, function(task) {
+                  return _c(
+                    "div",
+                    {
+                      key: task.id,
+                      staticClass:
+                        "mb-3 p-3 h-24 flex flex-col bg-white rounded-md shadow transform hover:shadow-md cursor-pointer"
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "block mb-2 text-xl text-gray-900" },
+                        [
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(task.title) +
+                              "\n          "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "text-gray-700 truncate" }, [
+                        _vm._v(
+                          "\n            " +
+                            _vm._s(task.description) +
+                            "\n          "
+                        )
+                      ])
+                    ]
+                  )
+                }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: !status.tasks.length,
+                        expression: "!status.tasks.length"
+                      }
+                    ],
+                    staticClass:
+                      "flex-1 p-4 flex flex-col items-center justify-center"
+                  },
+                  [
+                    _c("span", { staticClass: "text-gray-600" }, [
+                      _vm._v("No tasks yet")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "mt-1 text-sm text-orange-600 hover:underline"
+                      },
+                      [_vm._v("\n            追加\n          ")]
+                    )
+                  ]
+                )
+              ],
+              2
+            )
+          ])
+        ]
+      )
+    }),
+    0
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -49682,6 +49890,7 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 var app = new Vue({
   el: '#app'
 });
+Vue.component("kanban-board", __webpack_require__(/*! ./components/KanbanBoard.vue */ "./resources/js/components/KanbanBoard.vue")["default"]);
 
 /***/ }),
 
@@ -49799,14 +50008,72 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/user.scss":
-/*!***********************************!*\
-  !*** ./resources/sass/user.scss ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./resources/js/components/KanbanBoard.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/KanbanBoard.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _KanbanBoard_vue_vue_type_template_id_12d93558___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./KanbanBoard.vue?vue&type=template&id=12d93558& */ "./resources/js/components/KanbanBoard.vue?vue&type=template&id=12d93558&");
+/* harmony import */ var _KanbanBoard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./KanbanBoard.vue?vue&type=script&lang=js& */ "./resources/js/components/KanbanBoard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _KanbanBoard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _KanbanBoard_vue_vue_type_template_id_12d93558___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _KanbanBoard_vue_vue_type_template_id_12d93558___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/KanbanBoard.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/KanbanBoard.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/KanbanBoard.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KanbanBoard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./KanbanBoard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/KanbanBoard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KanbanBoard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/KanbanBoard.vue?vue&type=template&id=12d93558&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/KanbanBoard.vue?vue&type=template&id=12d93558& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_KanbanBoard_vue_vue_type_template_id_12d93558___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./KanbanBoard.vue?vue&type=template&id=12d93558& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/KanbanBoard.vue?vue&type=template&id=12d93558&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_KanbanBoard_vue_vue_type_template_id_12d93558___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_KanbanBoard_vue_vue_type_template_id_12d93558___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -49833,15 +50100,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!*********************************************************************************************************************!*\
+/*!********************************************************************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/user.scss ./resources/sass/front.scss ***!
-  \*********************************************************************************************************************/
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Applications/XAMPP/xamppfiles/htdocs/mynews/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /Applications/XAMPP/xamppfiles/htdocs/mynews/resources/sass/app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /Applications/XAMPP/xamppfiles/htdocs/mynews/resources/sass/user.scss */"./resources/sass/user.scss");
+!(function webpackMissingModule() { var e = new Error("Cannot find module '/Applications/XAMPP/xamppfiles/htdocs/mynews/resources/sass/user.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 module.exports = __webpack_require__(/*! /Applications/XAMPP/xamppfiles/htdocs/mynews/resources/sass/front.scss */"./resources/sass/front.scss");
 
 
