@@ -1,5 +1,8 @@
 @extends('layouts.common')
 
+{{-- user.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
+@section('title', 'Mynews')
+
 @section('content')
     <div class="container">
         <hr color="#c0c0c0">
