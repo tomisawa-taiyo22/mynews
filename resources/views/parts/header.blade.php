@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ _('Mynews') }}
+            {{ ('Mynews') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
                 {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
                 @else
                 <a class="navbar-brand"　 href="{{ url('/user/news/create') }}" role="button" class="btn btn-primary">
-                    {{ _('投稿する') }}
+                    {{ ('投稿する') }}
                 </a>
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -34,13 +34,13 @@
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                            {{ __('ログアウト') }}
+                            {{ ('ログアウト') }}
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
                         <a class="dropdown-item" href="{{ url('/user/news') }}">
-                            {{ __('編集ページ') }}
+                            {{ ('編集ページ') }}
                         </a>
                     </div>
                 </li>
